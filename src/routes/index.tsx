@@ -29,30 +29,81 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import SupportImage1 from "@/assets/Kids-Building-Robots-in-Engineering-Class-1421313308_6720x4480-scaled.jpeg";
+import SupportImage2 from "@/assets/Screenshot From 2026-05-20 18-34-54.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 const pillars = [
-  { icon: Lightbulb, title: "Discover Strengths", desc: "Uncover natural talents and interests through guided exploration." },
-  { icon: Palette, title: "Build Practical Skills", desc: "Creativity, teamwork, and problem-solving in every project." },
-  { icon: Rocket, title: "Explore Future Careers", desc: "Early exposure to tech, STEM, and the world of work." },
-  { icon: Sprout, title: "Entrepreneurial Mindset", desc: "Spot opportunities, innovate, and master business basics." },
-  { icon: Briefcase, title: "Future Career Pathways", desc: "Align growing skills to real vocational opportunities." },
+  {
+    icon: Lightbulb,
+    title: "Discover Strengths",
+    desc: "Uncover natural talents and interests through guided exploration.",
+  },
+  {
+    icon: Palette,
+    title: "Build Practical Skills",
+    desc: "Creativity, teamwork, and problem-solving in every project.",
+  },
+  {
+    icon: Rocket,
+    title: "Explore Future Careers",
+    desc: "Early exposure to tech, STEM, and the world of work.",
+  },
+  {
+    icon: Sprout,
+    title: "Entrepreneurial Mindset",
+    desc: "Spot opportunities, innovate, and master business basics.",
+  },
+  {
+    icon: Briefcase,
+    title: "Future Career Pathways",
+    desc: "Align growing skills to real vocational opportunities.",
+  },
 ];
 
 const weeks = [
-  { icon: Hammer, label: "Week 1", title: "Build", desc: "Children tackle a real hands-on challenge and create something tangible." },
-  { icon: Sparkles, label: "Week 2", title: "Brand", desc: "They learn to name, design, and present their idea with identity." },
-  { icon: Mic, label: "Week 3", title: "Pitch", desc: "They develop storytelling and presentation skills to sell their idea." },
-  { icon: ShoppingBag, label: "Week 4", title: "Sell", desc: "They simulate a real sale or market demo day and celebrate their work." },
+  {
+    icon: Hammer,
+    label: "Week 1",
+    title: "Build",
+    desc: "Children tackle a real hands-on challenge and create something tangible.",
+  },
+  {
+    icon: Sparkles,
+    label: "Week 2",
+    title: "Brand",
+    desc: "They learn to name, design, and present their idea with identity.",
+  },
+  {
+    icon: Mic,
+    label: "Week 3",
+    title: "Pitch",
+    desc: "They develop storytelling and presentation skills to sell their idea.",
+  },
+  {
+    icon: ShoppingBag,
+    label: "Week 4",
+    title: "Sell",
+    desc: "They simulate a real sale or market demo day and celebrate their work.",
+  },
 ];
 
-const heroImage = "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1400&q=80";
-const supportImage1 = "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=80";
-const supportImage2 = "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80";
+const heroImage =
+  "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1400&q=80";
+const supportImage1 =
+  "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80";
+const supportImage2 =
+  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80";
 
 function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
   const [submitted, setSubmitted] = useState(false);
@@ -83,7 +134,9 @@ function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
               <Check className="h-7 w-7 text-primary" />
             </div>
             <p className="font-display text-xl">You're on the list!</p>
-            <p className="text-sm text-muted-foreground">We'll reach out shortly with next steps.</p>
+            <p className="text-sm text-muted-foreground">
+              We'll reach out shortly with next steps.
+            </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -104,7 +157,9 @@ function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
                   </SelectTrigger>
                   <SelectContent>
                     {Array.from({ length: 8 }, (_, i) => 9 + i).map((a) => (
-                      <SelectItem key={a} value={String(a)}>{a} years</SelectItem>
+                      <SelectItem key={a} value={String(a)}>
+                        {a} years
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -143,33 +198,46 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
-      <header className="absolute top-0 z-20 w-full">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-2.5 text-primary-foreground">
-            <img src={logoUrl} alt="SkillSeed" className="h-9 w-9 rounded-md bg-white/95 p-1 shadow-sm" />
-            <span className="font-display text-xl font-semibold tracking-tight">SkillSeed</span>
+      <header className="absolute top-0 z-20 w-full px-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="flex items-center text-primary-foreground">
+            <img src={logoUrl} alt="SkillSeed" className="h-20" />
+            {/* <span className="font-display text-xl font-semibold tracking-tight text-secondary">SkillSeed</span> */}
           </div>
-          <WaitlistDialog
+          {/* <WaitlistDialog
             trigger={
               <Button variant="secondary" size="sm" className="font-medium">
                 Join Waitlist
               </Button>
             }
-          />
+          /> */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfYxAqmwCOQSq_wrGGwug2q7UdDzx_XavDjrlv89LsITMZerg/viewform?usp=header"
+            target="_blank"
+          >
+            <Button variant="secondary" size="sm" className="font-medium">
+              Join Waitlist
+            </Button>
+          </a>
         </div>
       </header>
 
       {/* Hero */}
       <section
-        className="relative overflow-hidden px-6 pb-24 pt-32 text-primary-foreground sm:pt-40"
-        style={{ background: "var(--gradient-hero)" }}
+        className="relative overflow-hidden pb-20 pt-32 text-primary-foreground sm:pt-40"
+        // style={{ background: "var(--gradient-hero)" }}
+        style={{
+          background: "var(--gradient-hero)",
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1400&q=80)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div
           aria-hidden
           className="absolute inset-0 opacity-[0.07]"
           style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+            backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
             backgroundSize: "32px 32px",
           }}
         />
@@ -187,7 +255,7 @@ function Index() {
             confidence, creativity, and future-ready skills.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <WaitlistDialog
+            {/* <WaitlistDialog
               trigger={
                 <Button
                   size="lg"
@@ -197,7 +265,19 @@ function Index() {
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Button>
               }
-            />
+            /> */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYxAqmwCOQSq_wrGGwug2q7UdDzx_XavDjrlv89LsITMZerg/viewform?usp=header"
+              target="_blank"
+            >
+              <Button
+                size="lg"
+                className="group h-12 bg-secondary px-7 text-base font-semibold text-secondary-foreground shadow-[var(--shadow-gold)] hover:bg-secondary/90"
+              >
+                Join the Waitlist
+                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Button>
+            </a>
             <a
               href="#program"
               className="text-sm font-medium text-primary-foreground/80 underline-offset-4 hover:underline"
@@ -206,33 +286,20 @@ function Index() {
             </a>
           </div>
           <p className="mt-6 text-xs text-primary-foreground/60">
-            Cohort starts <strong className="text-secondary">25th May</strong> · Ages 9–16
+            Cohort starts <strong className="text-secondary">29th May</strong> · Ages 9–16
           </p>
-        </div>
-
-        {/* Hero image */}
-        <div className="relative mx-auto mt-16 max-w-5xl">
-          <div className="overflow-hidden rounded-3xl border border-white/10 shadow-[var(--shadow-soft)]">
-            <img
-              src={heroImage}
-              alt="African children building and learning together"
-              className="h-[280px] w-full object-cover sm:h-[420px] md:h-[520px]"
-              loading="eager"
-            />
-          </div>
-          <div className="pointer-events-none absolute -bottom-6 -right-4 hidden rounded-2xl bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground shadow-[var(--shadow-gold)] sm:block">
-            Discover. Grow. Become.
-          </div>
         </div>
       </section>
 
       {/* Pillars */}
-      <section id="program" className="mx-auto max-w-7xl px-6 py-24">
+      <section id="program" className="mx-auto max-w-7xl px-6 py-14">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">
             What your child will gain
           </p>
-          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">Five seeds. One growing builder.</h2>
+          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">
+            Five seeds. One growing builder.
+          </h2>
           <p className="mt-4 text-muted-foreground">
             Each pillar is woven through every project, every challenge, every demo day.
           </p>
@@ -256,36 +323,57 @@ function Index() {
             style={{ background: "var(--gradient-gold)" }}
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest opacity-80">Limited cohort</p>
+              <p className="text-xs font-semibold uppercase tracking-widest opacity-80">
+                Limited cohort
+              </p>
               <h3 className="mt-3 font-display text-2xl font-semibold">
                 Spots fill fast. Reserve yours today.
               </h3>
             </div>
-            <WaitlistDialog
+            {/* <WaitlistDialog
               trigger={
-                <Button variant="default" className="mt-6 w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button
+                  variant="default"
+                  className="mt-6 w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                >
                   Join the Waitlist
                 </Button>
               }
-            />
+            /> */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYxAqmwCOQSq_wrGGwug2q7UdDzx_XavDjrlv89LsITMZerg/viewform?usp=header"
+              target="_blank"
+            >
+              <Button
+                variant="default"
+                className="mt-6 w-full bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Join the Waitlist
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Video */}
-      <section className="bg-muted/40 px-6 py-24">
+      <section className="bg-muted/40 px-6 py-14">
         <div className="mx-auto max-w-4xl text-center">
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary/70">
             <PlayCircle className="h-4 w-4" /> Watch the program
           </p>
-          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">See the Builder Series in Action</h2>
+          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">
+            See the Builder Series in Action
+          </h2>
           <p className="mt-4 text-muted-foreground">Watch what your child will experience.</p>
         </div>
         <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border bg-card p-2 shadow-[var(--shadow-soft)] sm:p-3">
-          <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingTop: "56.25%" }}>
+          <div
+            className="relative w-full overflow-hidden rounded-2xl"
+            style={{ paddingTop: "56.25%" }}
+          >
             <iframe
               className="absolute inset-0 h-full w-full"
-              src="https://www.youtube.com/embed/YOUTUBE_ID_HERE"
+              src="https://www.youtube.com/embed/Ly-CXEPvB2A"
               title="SkillSeed Builder Series"
               frameBorder={0}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -296,9 +384,11 @@ function Index() {
       </section>
 
       {/* 4-week journey */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">What to expect</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">
+            What to expect
+          </p>
           <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">
             Four Weeks. One Complete Builder Journey.
           </h2>
@@ -327,7 +417,9 @@ function Index() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">{label}</p>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">
+                      {label}
+                    </p>
                     <h3 className="font-display text-2xl font-semibold leading-none">{title}</h3>
                   </div>
                 </div>
@@ -344,7 +436,7 @@ function Index() {
         <div className="mt-16 grid gap-5 sm:grid-cols-2">
           <div className="overflow-hidden rounded-3xl">
             <img
-              src={supportImage1}
+              src={SupportImage1}
               alt="Children collaborating on a hands-on project"
               className="h-72 w-full object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
@@ -352,7 +444,7 @@ function Index() {
           </div>
           <div className="overflow-hidden rounded-3xl">
             <img
-              src={supportImage2}
+              src={SupportImage2}
               alt="Young learners exploring technology"
               className="h-72 w-full object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
@@ -362,21 +454,23 @@ function Index() {
       </section>
 
       {/* CTA band */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-14">
         <div
           className="mx-auto max-w-5xl rounded-3xl px-8 py-16 text-center text-primary-foreground"
           style={{ background: "var(--gradient-hero)" }}
         >
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
             Africa does not lack talent.
-            <span className="block italic text-secondary">Too often, we simply discover it too late.</span>
+            <span className="block italic text-secondary">
+              Too often, we simply discover it too late.
+            </span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-primary-foreground/75">
             Give your child a head start with mentor-led, project-based learning designed for the
             next generation of builders.
           </p>
           <div className="mt-8 flex justify-center">
-            <WaitlistDialog
+            {/* <WaitlistDialog
               trigger={
                 <Button
                   size="lg"
@@ -386,7 +480,19 @@ function Index() {
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               }
-            />
+            /> */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYxAqmwCOQSq_wrGGwug2q7UdDzx_XavDjrlv89LsITMZerg/viewform?usp=header"
+              target="_blank"
+            >
+              <Button
+                size="lg"
+                className="h-12 bg-secondary px-7 text-base font-semibold text-secondary-foreground hover:bg-secondary/90"
+              >
+                Join the Waitlist
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -404,6 +510,7 @@ function Index() {
             </p>
             <a
               href="https://wekraft.co"
+              target="_blank"
               className="mt-3 inline-block text-sm font-semibold text-primary hover:underline"
             >
               wekraft.co
@@ -431,11 +538,21 @@ function Index() {
             <p className="mt-3 text-sm text-muted-foreground">
               Fill the form to learn more and reserve a spot for your child.
             </p>
-            <WaitlistDialog
+            {/* <WaitlistDialog
               trigger={
-                <Button variant="default" className="mt-4">Join Waitlist</Button>
+                <Button variant="default" className="mt-4">
+                  Join Waitlist
+                </Button>
               }
-            />
+            /> */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfYxAqmwCOQSq_wrGGwug2q7UdDzx_XavDjrlv89LsITMZerg/viewform?usp=header"
+              target="_blank"
+            >
+              <Button variant="default" className="mt-4">
+                Join Waitlist
+              </Button>
+            </a>
           </div>
         </div>
         <div className="border-t py-5 text-center text-xs text-muted-foreground">
