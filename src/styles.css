@@ -97,10 +97,11 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.03 200) 0%, oklch(0.32 0.06 195) 100%);
-  --gradient-gold: linear-gradient(135deg, oklch(0.85 0.16 85), oklch(0.72 0.17 65));
-  --shadow-soft: 0 10px 40px -10px oklch(0.25 0.04 200 / 0.25);
-  --shadow-gold: 0 12px 36px -10px oklch(0.72 0.17 65 / 0.45);
+  --gradient-hero: linear-gradient(135deg, #0A1A2F 0%, #143052 60%, #1f4a73 100%);
+  --gradient-gold: linear-gradient(135deg, #FAB548, #f59e2b);
+  --gradient-blue: linear-gradient(135deg, #3C91BA, #2a6f93);
+  --shadow-soft: 0 10px 40px -10px oklch(0.20 0.05 258 / 0.25);
+  --shadow-gold: 0 12px 36px -10px oklch(0.78 0.16 75 / 0.50);
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
