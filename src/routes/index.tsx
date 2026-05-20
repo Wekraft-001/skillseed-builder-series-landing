@@ -129,9 +129,9 @@ function Index() {
       {/* Nav */}
       <header className="absolute top-0 z-20 w-full">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-2 text-primary-foreground">
-            <Sprout className="h-6 w-6 text-secondary" />
-            <span className="font-display text-xl font-semibold">SkillSeed</span>
+          <div className="flex items-center gap-2.5 text-primary-foreground">
+            <img src={logoUrl} alt="SkillSeed" className="h-9 w-9 rounded-md bg-white/95 p-1 shadow-sm" />
+            <span className="font-display text-xl font-semibold tracking-tight">SkillSeed</span>
           </div>
           <WaitlistDialog
             trigger={
