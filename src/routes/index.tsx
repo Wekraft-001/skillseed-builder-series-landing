@@ -11,6 +11,7 @@ import {
   Check,
   Leaf,
 } from "lucide-react";
+import logoUrl from "@/assets/skillseed-logo.svg";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
