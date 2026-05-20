@@ -276,7 +276,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:grid-cols-2 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <Sprout className="h-5 w-5 text-primary" />
+              <img src={logoUrl} alt="SkillSeed" className="h-7 w-7 rounded-md" />
               <span className="font-display text-lg font-semibold">SkillSeed</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">
