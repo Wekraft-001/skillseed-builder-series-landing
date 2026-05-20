@@ -209,6 +209,21 @@ function Index() {
             Cohort starts <strong className="text-secondary">25th May</strong> · Ages 9–16
           </p>
         </div>
+
+        {/* Hero image */}
+        <div className="relative mx-auto mt-16 max-w-5xl">
+          <div className="overflow-hidden rounded-3xl border border-white/10 shadow-[var(--shadow-soft)]">
+            <img
+              src={heroImage}
+              alt="African children building and learning together"
+              className="h-[280px] w-full object-cover sm:h-[420px] md:h-[520px]"
+              loading="eager"
+            />
+          </div>
+          <div className="pointer-events-none absolute -bottom-6 -right-4 hidden rounded-2xl bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground shadow-[var(--shadow-gold)] sm:block">
+            Discover. Grow. Become.
+          </div>
+        </div>
       </section>
 
       {/* Pillars */}
