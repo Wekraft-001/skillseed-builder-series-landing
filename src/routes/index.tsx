@@ -11,6 +11,7 @@ import {
   Check,
   Leaf,
 } from "lucide-react";
+import logoUrl from "@/assets/skillseed-logo.svg";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -128,9 +129,9 @@ function Index() {
       {/* Nav */}
       <header className="absolute top-0 z-20 w-full">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-2 text-primary-foreground">
-            <Sprout className="h-6 w-6 text-secondary" />
-            <span className="font-display text-xl font-semibold">SkillSeed</span>
+          <div className="flex items-center gap-2.5 text-primary-foreground">
+            <img src={logoUrl} alt="SkillSeed" className="h-9 w-9 rounded-md bg-white/95 p-1 shadow-sm" />
+            <span className="font-display text-xl font-semibold tracking-tight">SkillSeed</span>
           </div>
           <WaitlistDialog
             trigger={
@@ -275,7 +276,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:grid-cols-2 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <Sprout className="h-5 w-5 text-primary" />
+              <img src={logoUrl} alt="SkillSeed" className="h-7 w-7 rounded-md" />
               <span className="font-display text-lg font-semibold">SkillSeed</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">
