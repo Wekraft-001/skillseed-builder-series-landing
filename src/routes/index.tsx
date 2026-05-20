@@ -43,6 +43,17 @@ const pillars = [
   { icon: Briefcase, title: "Future Career Pathways", desc: "Align growing skills to real vocational opportunities." },
 ];
 
+const weeks = [
+  { icon: Hammer, label: "Week 1", title: "Build", desc: "Children tackle a real hands-on challenge and create something tangible." },
+  { icon: Sparkles, label: "Week 2", title: "Brand", desc: "They learn to name, design, and present their idea with identity." },
+  { icon: Mic, label: "Week 3", title: "Pitch", desc: "They develop storytelling and presentation skills to sell their idea." },
+  { icon: ShoppingBag, label: "Week 4", title: "Sell", desc: "They simulate a real sale or market demo day and celebrate their work." },
+];
+
+const heroImage = "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1400&q=80";
+const supportImage1 = "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=80";
+const supportImage2 = "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80";
+
 function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
   const [submitted, setSubmitted] = useState(false);
   const [open, setOpen] = useState(false);
