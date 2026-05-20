@@ -10,6 +10,11 @@ import {
   ArrowRight,
   Check,
   Leaf,
+  Hammer,
+  Sparkles,
+  Mic,
+  ShoppingBag,
+  PlayCircle,
 } from "lucide-react";
 import logoUrl from "@/assets/skillseed-logo.svg";
 import { Button } from "@/components/ui/button";
@@ -37,6 +42,17 @@ const pillars = [
   { icon: Sprout, title: "Entrepreneurial Mindset", desc: "Spot opportunities, innovate, and master business basics." },
   { icon: Briefcase, title: "Future Career Pathways", desc: "Align growing skills to real vocational opportunities." },
 ];
+
+const weeks = [
+  { icon: Hammer, label: "Week 1", title: "Build", desc: "Children tackle a real hands-on challenge and create something tangible." },
+  { icon: Sparkles, label: "Week 2", title: "Brand", desc: "They learn to name, design, and present their idea with identity." },
+  { icon: Mic, label: "Week 3", title: "Pitch", desc: "They develop storytelling and presentation skills to sell their idea." },
+  { icon: ShoppingBag, label: "Week 4", title: "Sell", desc: "They simulate a real sale or market demo day and celebrate their work." },
+];
+
+const heroImage = "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1400&q=80";
+const supportImage1 = "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=80";
+const supportImage2 = "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80";
 
 function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
   const [submitted, setSubmitted] = useState(false);
@@ -193,6 +209,21 @@ function Index() {
             Cohort starts <strong className="text-secondary">25th May</strong> · Ages 9–16
           </p>
         </div>
+
+        {/* Hero image */}
+        <div className="relative mx-auto mt-16 max-w-5xl">
+          <div className="overflow-hidden rounded-3xl border border-white/10 shadow-[var(--shadow-soft)]">
+            <img
+              src={heroImage}
+              alt="African children building and learning together"
+              className="h-[280px] w-full object-cover sm:h-[420px] md:h-[520px]"
+              loading="eager"
+            />
+          </div>
+          <div className="pointer-events-none absolute -bottom-6 -right-4 hidden rounded-2xl bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground shadow-[var(--shadow-gold)] sm:block">
+            Discover. Grow. Become.
+          </div>
+        </div>
       </section>
 
       {/* Pillars */}
@@ -236,6 +267,95 @@ function Index() {
                   Join the Waitlist
                 </Button>
               }
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section className="bg-muted/40 px-6 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary/70">
+            <PlayCircle className="h-4 w-4" /> Watch the program
+          </p>
+          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">See the Builder Series in Action</h2>
+          <p className="mt-4 text-muted-foreground">Watch what your child will experience.</p>
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border bg-card p-2 shadow-[var(--shadow-soft)] sm:p-3">
+          <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/YOUTUBE_ID_HERE"
+              title="SkillSeed Builder Series"
+              frameBorder={0}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 4-week journey */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">What to expect</p>
+          <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">
+            Four Weeks. One Complete Builder Journey.
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            A guided, hands-on path from idea to demo day.
+          </p>
+        </div>
+
+        <div className="relative mt-16">
+          {/* connecting line on desktop */}
+          <div
+            aria-hidden
+            className="absolute left-0 right-0 top-7 hidden h-0.5 bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10 lg:block"
+          />
+          <ol className="grid gap-6 lg:grid-cols-4">
+            {weeks.map(({ icon: Icon, label, title, desc }, i) => (
+              <li
+                key={title}
+                className="relative rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-primary-foreground shadow-[var(--shadow-soft)]"
+                    style={{ background: "var(--gradient-hero)" }}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-primary/70">{label}</p>
+                    <h3 className="font-display text-2xl font-semibold leading-none">{title}</h3>
+                  </div>
+                </div>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                <span className="absolute right-5 top-5 text-5xl font-bold text-primary/5">
+                  {i + 1}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* supporting images */}
+        <div className="mt-16 grid gap-5 sm:grid-cols-2">
+          <div className="overflow-hidden rounded-3xl">
+            <img
+              src={supportImage1}
+              alt="Children collaborating on a hands-on project"
+              className="h-72 w-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden rounded-3xl">
+            <img
+              src={supportImage2}
+              alt="Young learners exploring technology"
+              className="h-72 w-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
             />
           </div>
         </div>
