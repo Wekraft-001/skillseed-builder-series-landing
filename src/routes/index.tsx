@@ -10,6 +10,11 @@ import {
   ArrowRight,
   Check,
   Leaf,
+  Hammer,
+  Sparkles,
+  Mic,
+  ShoppingBag,
+  PlayCircle,
 } from "lucide-react";
 import logoUrl from "@/assets/skillseed-logo.svg";
 import { Button } from "@/components/ui/button";
